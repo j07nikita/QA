@@ -1,0 +1,342 @@
+WARN: fix_embeddings set to False as tune_partial > 0.
+05/16/2019 05:04:16 PM: [ COMMAND: scripts/reader/train.py --embedding-file glove.840B.300d.txt --tune-partial 1000 --gpu 2 ]
+05/16/2019 05:04:16 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/16/2019 05:04:16 PM: [ Load data files ]
+05/16/2019 05:04:56 PM: [ Num train examples = 86068 ]
+05/16/2019 05:04:58 PM: [ Num dev examples = 11873 ]
+05/16/2019 05:04:58 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/16/2019 05:04:58 PM: [ Training model from scratch... ]
+05/16/2019 05:04:58 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/16/2019 05:04:58 PM: [ Generate features ]
+05/16/2019 05:05:05 PM: [ Num features = 62 ]
+05/16/2019 05:05:05 PM: [ {"pos=''": 26, 'pos=.': 15, 'pos=NN': 7, 'ner=LOCATION': 52, 'pos=VB': 29, 'ner=ORGANIZATION': 55, 'pos=:': 5, 'pos=POS': 21, 'in_question_lemma': 2, 'in_question_uncased': 1, 'pos=VBD': 18, 'ner=O': 49, 'in_question': 0, 'pos=UH': 37, 'pos=CD': 10, 'pos=WRB': 34, 'pos=JJS': 32, 'pos=PRP': 17, 'pos=$': 39, 'pos=JJ': 6, 'pos=IN': 16, 'pos=-LRB-': 4, 'pos=NNP': 3, 'pos=WP$': 42, 'pos=NNS': 19, 'ner=MONEY': 58, 'pos=``': 25, 'pos=RBR': 40, 'ner=PERCENT': 60, 'pos=-RRB-': 8, 'ner=DATE': 50, 'pos=WP': 38, 'pos=PRP$': 22, 'ner=DURATION': 56, 'ner=TIME': 59, 'ner=PERSON': 48, 'pos=NNPS': 36, 'pos=MD': 35, 'pos=EX': 43, 'ner=ORDINAL': 54, 'pos=CC': 14, 'ner=NUMBER': 53, 'pos=LS': 47, 'ner=MISC': 51, 'pos=RBS': 33, 'pos=DT': 13, 'pos=,': 11, 'pos=#': 41, 'pos=VBZ': 12, 'pos=JJR': 31, 'pos=VBG': 27, 'pos=RB': 23, 'pos=RP': 30, 'pos=TO': 20, 'tf': 61, 'ner=SET': 57, 'pos=PDT': 45, 'pos=SYM': 46, 'pos=WDT': 24, 'pos=VBP': 28, 'pos=FW': 44, 'pos=VBN': 9} ]
+05/16/2019 05:05:05 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/16/2019 05:05:05 PM: [ Build dictionary ]
+05/16/2019 05:05:05 PM: [ Restricting to words in ../glove.840B.300d.txt ]
+05/16/2019 05:06:47 PM: [ Num words in set = 2195961 ]
+05/16/2019 05:06:55 PM: [ Num words = 96896 ]
+05/16/2019 05:06:58 PM: [ Loading pre-trained embeddings for 96894 words from ../glove.840B.300d.txt ]
+05/16/2019 05:07:07 PM: [ WARN: Duplicate embedding found for Kṛṣṇa ]
+05/16/2019 05:07:10 PM: [ WARN: Duplicate embedding found for · ]
+05/16/2019 05:07:12 PM: [ WARN: Duplicate embedding found for ; ]
+05/16/2019 05:07:12 PM: [ WARN: Duplicate embedding found for à ]
+05/16/2019 05:07:16 PM: [ WARN: Duplicate embedding found for José ]
+05/16/2019 05:07:19 PM: [ WARN: Duplicate embedding found for Justiça ]
+05/16/2019 05:07:19 PM: [ WARN: Duplicate embedding found for für ]
+05/16/2019 05:07:21 PM: [ WARN: Duplicate embedding found for Câmara ]
+05/16/2019 05:07:26 PM: [ WARN: Duplicate embedding found for André ]
+05/16/2019 05:07:27 PM: [ WARN: Duplicate embedding found for François ]
+05/16/2019 05:07:27 PM: [ WARN: Duplicate embedding found for María ]
+05/16/2019 05:07:29 PM: [ WARN: Duplicate embedding found for García ]
+05/16/2019 05:07:31 PM: [ WARN: Duplicate embedding found for René ]
+05/16/2019 05:07:34 PM: [ WARN: Duplicate embedding found for Vaiṣṇava ]
+05/16/2019 05:07:35 PM: [ WARN: Duplicate embedding found for câmara ]
+05/16/2019 05:07:38 PM: [ WARN: Duplicate embedding found for Café ]
+05/16/2019 05:07:40 PM: [ WARN: Duplicate embedding found for São ]
+05/16/2019 05:07:43 PM: [ WARN: Duplicate embedding found for Müller ]
+05/16/2019 05:07:44 PM: [ Loaded 96894 embeddings (100.00%) ]
+05/16/2019 05:07:44 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/16/2019 05:07:44 PM: [ Counting 1000 most frequent question words ]
+05/16/2019 05:07:48 PM: [ ('?', 85121) ]
+05/16/2019 05:07:48 PM: [ ('the', 60513) ]
+05/16/2019 05:07:48 PM: [ ('What', 36977) ]
+05/16/2019 05:07:48 PM: [ ('of', 33750) ]
+05/16/2019 05:07:48 PM: [ ('in', 21622) ]
+05/16/2019 05:07:48 PM: [ ... ]
+05/16/2019 05:07:48 PM: [ ('IBM', 102) ]
+05/16/2019 05:07:48 PM: [ ('man', 102) ]
+05/16/2019 05:07:48 PM: [ ('software', 102) ]
+05/16/2019 05:07:48 PM: [ ('text', 102) ]
+05/16/2019 05:07:48 PM: [ ('attend', 101) ]
+05/16/2019 05:07:57 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/16/2019 05:07:57 PM: [ Make data loaders ]
+05/16/2019 05:07:57 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/16/2019 05:07:57 PM: [ CONFIG:
+{
+    "batch_size": 16,
+    "checkpoint": false,
+    "concat_rnn_layers": true,
+    "cuda": true,
+    "data_dir": "/home/nikita.rungta/DrQA/data/datasets",
+    "data_workers": 5,
+    "dev_file": "/home/nikita.rungta/DrQA/data/datasets/dev-v2.0-processed-corenlp.txt",
+    "dev_json": "/home/nikita.rungta/DrQA/data/datasets/dev-v2.0.json",
+    "display_iter": 25,
+    "doc_layers": 3,
+    "dropout_emb": 0.4,
+    "dropout_rnn": 0.4,
+    "dropout_rnn_output": true,
+    "embed_dir": "../",
+    "embedding_dim": 300,
+    "embedding_file": "../glove.840B.300d.txt",
+    "expand_dictionary": false,
+    "fix_embeddings": false,
+    "gpu": 2,
+    "grad_clipping": 10,
+    "hidden_size": 128,
+    "learning_rate": 0.1,
+    "log_file": "/tmp/drqa-models/20190516-8e615d4c.txt",
+    "max_len": 15,
+    "model_dir": "/tmp/drqa-models/",
+    "model_file": "/tmp/drqa-models/20190516-8e615d4c.mdl",
+    "model_name": "20190516-8e615d4c",
+    "model_type": "rnn",
+    "momentum": 0,
+    "no_cuda": false,
+    "num_epochs": 40,
+    "official_eval": true,
+    "optimizer": "adamax",
+    "parallel": false,
+    "pretrained": "",
+    "question_layers": 3,
+    "question_merge": "self_attn",
+    "random_seed": 1013,
+    "restrict_vocab": true,
+    "rnn_padding": false,
+    "rnn_type": "lstm",
+    "sort_by_len": true,
+    "test_batch_size": 128,
+    "train_file": "/home/nikita.rungta/DrQA/data/datasets/train-v2.0-processed-corenlp.txt",
+    "tune_partial": 1000,
+    "uncased_doc": false,
+    "uncased_question": false,
+    "use_in_question": true,
+    "use_lemma": true,
+    "use_ner": true,
+    "use_pos": true,
+    "use_qemb": true,
+    "use_tf": true,
+    "valid_metric": "f1",
+    "weight_decay": 0
+} ]
+05/16/2019 05:07:57 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/16/2019 05:07:57 PM: [ Starting training... ]
+05/16/2019 05:07:59 PM: [ train: Epoch = 0 | iter = 0/5380 | loss = 8.92 | elapsed time = 1.32 (s) ]
+05/16/2019 05:08:00 PM: [ train: Epoch = 0 | iter = 25/5380 | loss = 9.46 | elapsed time = 2.64 (s) ]
+05/16/2019 05:08:01 PM: [ train: Epoch = 0 | iter = 50/5380 | loss = 8.44 | elapsed time = 3.80 (s) ]
+05/16/2019 05:08:03 PM: [ train: Epoch = 0 | iter = 75/5380 | loss = 8.71 | elapsed time = 5.09 (s) ]
+05/16/2019 05:08:04 PM: [ train: Epoch = 0 | iter = 100/5380 | loss = 7.90 | elapsed time = 6.32 (s) ]
+05/16/2019 05:08:05 PM: [ train: Epoch = 0 | iter = 125/5380 | loss = 7.74 | elapsed time = 7.64 (s) ]
+05/16/2019 05:08:06 PM: [ train: Epoch = 0 | iter = 150/5380 | loss = 7.89 | elapsed time = 8.96 (s) ]
+05/16/2019 05:08:08 PM: [ train: Epoch = 0 | iter = 175/5380 | loss = 7.41 | elapsed time = 10.19 (s) ]
+05/16/2019 05:08:09 PM: [ train: Epoch = 0 | iter = 200/5380 | loss = 7.65 | elapsed time = 11.51 (s) ]
+05/16/2019 05:08:10 PM: [ train: Epoch = 0 | iter = 225/5380 | loss = 7.12 | elapsed time = 12.82 (s) ]
+05/16/2019 05:08:12 PM: [ train: Epoch = 0 | iter = 250/5380 | loss = 6.97 | elapsed time = 14.09 (s) ]
+05/16/2019 05:08:13 PM: [ train: Epoch = 0 | iter = 275/5380 | loss = 7.07 | elapsed time = 15.39 (s) ]
+05/16/2019 05:08:14 PM: [ train: Epoch = 0 | iter = 300/5380 | loss = 6.85 | elapsed time = 16.72 (s) ]
+05/16/2019 05:08:15 PM: [ train: Epoch = 0 | iter = 325/5380 | loss = 6.83 | elapsed time = 17.92 (s) ]
+05/16/2019 05:08:17 PM: [ train: Epoch = 0 | iter = 350/5380 | loss = 6.84 | elapsed time = 19.15 (s) ]
+05/16/2019 05:08:18 PM: [ train: Epoch = 0 | iter = 375/5380 | loss = 6.76 | elapsed time = 20.41 (s) ]
+05/16/2019 05:08:19 PM: [ train: Epoch = 0 | iter = 400/5380 | loss = 6.51 | elapsed time = 21.65 (s) ]
+05/16/2019 05:08:20 PM: [ train: Epoch = 0 | iter = 425/5380 | loss = 6.58 | elapsed time = 22.91 (s) ]
+05/16/2019 05:08:22 PM: [ train: Epoch = 0 | iter = 450/5380 | loss = 6.41 | elapsed time = 24.12 (s) ]
+05/16/2019 05:08:23 PM: [ train: Epoch = 0 | iter = 475/5380 | loss = 6.28 | elapsed time = 25.39 (s) ]
+05/16/2019 05:08:24 PM: [ train: Epoch = 0 | iter = 500/5380 | loss = 6.05 | elapsed time = 26.68 (s) ]
+05/16/2019 05:08:25 PM: [ train: Epoch = 0 | iter = 525/5380 | loss = 6.38 | elapsed time = 28.00 (s) ]
+05/16/2019 05:08:27 PM: [ train: Epoch = 0 | iter = 550/5380 | loss = 6.42 | elapsed time = 29.30 (s) ]
+05/16/2019 05:08:28 PM: [ train: Epoch = 0 | iter = 575/5380 | loss = 6.15 | elapsed time = 30.54 (s) ]
+05/16/2019 05:08:29 PM: [ train: Epoch = 0 | iter = 600/5380 | loss = 6.23 | elapsed time = 31.81 (s) ]
+05/16/2019 05:08:31 PM: [ train: Epoch = 0 | iter = 625/5380 | loss = 6.13 | elapsed time = 33.09 (s) ]
+05/16/2019 05:08:32 PM: [ train: Epoch = 0 | iter = 650/5380 | loss = 6.13 | elapsed time = 34.39 (s) ]
+05/16/2019 05:08:33 PM: [ train: Epoch = 0 | iter = 675/5380 | loss = 6.04 | elapsed time = 35.68 (s) ]
+05/16/2019 05:08:34 PM: [ train: Epoch = 0 | iter = 700/5380 | loss = 6.06 | elapsed time = 36.94 (s) ]
+05/16/2019 05:08:36 PM: [ train: Epoch = 0 | iter = 725/5380 | loss = 6.09 | elapsed time = 38.32 (s) ]
+05/16/2019 05:08:37 PM: [ train: Epoch = 0 | iter = 750/5380 | loss = 5.60 | elapsed time = 39.49 (s) ]
+05/16/2019 05:08:38 PM: [ train: Epoch = 0 | iter = 775/5380 | loss = 5.76 | elapsed time = 40.81 (s) ]
+05/16/2019 05:08:40 PM: [ train: Epoch = 0 | iter = 800/5380 | loss = 5.80 | elapsed time = 42.06 (s) ]
+05/16/2019 05:08:41 PM: [ train: Epoch = 0 | iter = 825/5380 | loss = 5.65 | elapsed time = 43.26 (s) ]
+05/16/2019 05:08:42 PM: [ train: Epoch = 0 | iter = 850/5380 | loss = 5.87 | elapsed time = 44.51 (s) ]
+05/16/2019 05:08:43 PM: [ train: Epoch = 0 | iter = 875/5380 | loss = 5.69 | elapsed time = 45.88 (s) ]
+05/16/2019 05:08:45 PM: [ train: Epoch = 0 | iter = 900/5380 | loss = 6.10 | elapsed time = 47.21 (s) ]
+05/16/2019 05:08:46 PM: [ train: Epoch = 0 | iter = 925/5380 | loss = 5.54 | elapsed time = 48.41 (s) ]
+05/16/2019 05:08:47 PM: [ train: Epoch = 0 | iter = 950/5380 | loss = 5.47 | elapsed time = 49.67 (s) ]
+05/16/2019 05:08:48 PM: [ train: Epoch = 0 | iter = 975/5380 | loss = 5.50 | elapsed time = 50.85 (s) ]
+05/16/2019 05:08:50 PM: [ train: Epoch = 0 | iter = 1000/5380 | loss = 5.65 | elapsed time = 52.05 (s) ]
+05/16/2019 05:08:51 PM: [ train: Epoch = 0 | iter = 1025/5380 | loss = 5.43 | elapsed time = 53.25 (s) ]
+05/16/2019 05:08:52 PM: [ train: Epoch = 0 | iter = 1050/5380 | loss = 5.16 | elapsed time = 54.52 (s) ]
+05/16/2019 05:08:53 PM: [ train: Epoch = 0 | iter = 1075/5380 | loss = 5.41 | elapsed time = 55.76 (s) ]
+05/16/2019 05:08:55 PM: [ train: Epoch = 0 | iter = 1100/5380 | loss = 5.58 | elapsed time = 57.05 (s) ]
+05/16/2019 05:08:56 PM: [ train: Epoch = 0 | iter = 1125/5380 | loss = 5.62 | elapsed time = 58.31 (s) ]
+05/16/2019 05:08:57 PM: [ train: Epoch = 0 | iter = 1150/5380 | loss = 5.44 | elapsed time = 59.58 (s) ]
+05/16/2019 05:08:58 PM: [ train: Epoch = 0 | iter = 1175/5380 | loss = 5.66 | elapsed time = 60.94 (s) ]
+05/16/2019 05:09:00 PM: [ train: Epoch = 0 | iter = 1200/5380 | loss = 5.32 | elapsed time = 62.35 (s) ]
+05/16/2019 05:09:01 PM: [ train: Epoch = 0 | iter = 1225/5380 | loss = 5.51 | elapsed time = 63.71 (s) ]
+05/16/2019 05:09:03 PM: [ train: Epoch = 0 | iter = 1250/5380 | loss = 5.03 | elapsed time = 65.13 (s) ]
+05/16/2019 05:09:04 PM: [ train: Epoch = 0 | iter = 1275/5380 | loss = 5.21 | elapsed time = 66.54 (s) ]
+05/16/2019 05:09:05 PM: [ train: Epoch = 0 | iter = 1300/5380 | loss = 5.14 | elapsed time = 67.91 (s) ]
+05/16/2019 05:09:07 PM: [ train: Epoch = 0 | iter = 1325/5380 | loss = 5.10 | elapsed time = 69.22 (s) ]
+05/16/2019 05:09:08 PM: [ train: Epoch = 0 | iter = 1350/5380 | loss = 5.49 | elapsed time = 70.57 (s) ]
+05/16/2019 05:09:09 PM: [ train: Epoch = 0 | iter = 1375/5380 | loss = 5.23 | elapsed time = 71.88 (s) ]
+05/16/2019 05:09:11 PM: [ train: Epoch = 0 | iter = 1400/5380 | loss = 5.11 | elapsed time = 73.26 (s) ]
+05/16/2019 05:09:12 PM: [ train: Epoch = 0 | iter = 1425/5380 | loss = 5.30 | elapsed time = 74.74 (s) ]
+05/16/2019 05:09:14 PM: [ train: Epoch = 0 | iter = 1450/5380 | loss = 5.13 | elapsed time = 76.26 (s) ]
+05/16/2019 05:09:15 PM: [ train: Epoch = 0 | iter = 1475/5380 | loss = 5.20 | elapsed time = 77.79 (s) ]
+05/16/2019 05:09:17 PM: [ train: Epoch = 0 | iter = 1500/5380 | loss = 5.29 | elapsed time = 79.17 (s) ]
+05/16/2019 05:09:18 PM: [ train: Epoch = 0 | iter = 1525/5380 | loss = 4.94 | elapsed time = 80.56 (s) ]
+05/16/2019 05:09:19 PM: [ train: Epoch = 0 | iter = 1550/5380 | loss = 5.12 | elapsed time = 81.94 (s) ]
+05/16/2019 05:09:21 PM: [ train: Epoch = 0 | iter = 1575/5380 | loss = 5.49 | elapsed time = 83.23 (s) ]
+05/16/2019 05:09:22 PM: [ train: Epoch = 0 | iter = 1600/5380 | loss = 4.77 | elapsed time = 84.56 (s) ]
+05/16/2019 05:09:23 PM: [ train: Epoch = 0 | iter = 1625/5380 | loss = 5.04 | elapsed time = 85.93 (s) ]
+05/16/2019 05:09:25 PM: [ train: Epoch = 0 | iter = 1650/5380 | loss = 5.30 | elapsed time = 87.29 (s) ]
+05/16/2019 05:09:26 PM: [ train: Epoch = 0 | iter = 1675/5380 | loss = 5.03 | elapsed time = 88.59 (s) ]
+05/16/2019 05:09:27 PM: [ train: Epoch = 0 | iter = 1700/5380 | loss = 5.24 | elapsed time = 89.97 (s) ]
+05/16/2019 05:09:29 PM: [ train: Epoch = 0 | iter = 1725/5380 | loss = 5.04 | elapsed time = 91.35 (s) ]
+05/16/2019 05:09:30 PM: [ train: Epoch = 0 | iter = 1750/5380 | loss = 4.97 | elapsed time = 92.63 (s) ]
+05/16/2019 05:09:32 PM: [ train: Epoch = 0 | iter = 1775/5380 | loss = 5.18 | elapsed time = 94.08 (s) ]
+05/16/2019 05:09:33 PM: [ train: Epoch = 0 | iter = 1800/5380 | loss = 5.16 | elapsed time = 95.58 (s) ]
+05/16/2019 05:09:34 PM: [ train: Epoch = 0 | iter = 1825/5380 | loss = 4.75 | elapsed time = 96.92 (s) ]
+05/16/2019 05:09:36 PM: [ train: Epoch = 0 | iter = 1850/5380 | loss = 5.16 | elapsed time = 98.33 (s) ]
+05/16/2019 05:09:37 PM: [ train: Epoch = 0 | iter = 1875/5380 | loss = 4.85 | elapsed time = 99.79 (s) ]
+05/16/2019 05:09:39 PM: [ train: Epoch = 0 | iter = 1900/5380 | loss = 4.96 | elapsed time = 101.11 (s) ]
+05/16/2019 05:09:40 PM: [ train: Epoch = 0 | iter = 1925/5380 | loss = 5.07 | elapsed time = 102.64 (s) ]
+05/16/2019 05:09:42 PM: [ train: Epoch = 0 | iter = 1950/5380 | loss = 4.78 | elapsed time = 104.16 (s) ]
+05/16/2019 05:09:43 PM: [ train: Epoch = 0 | iter = 1975/5380 | loss = 5.07 | elapsed time = 105.48 (s) ]
+05/16/2019 05:09:44 PM: [ train: Epoch = 0 | iter = 2000/5380 | loss = 4.74 | elapsed time = 106.85 (s) ]
+05/16/2019 05:09:46 PM: [ train: Epoch = 0 | iter = 2025/5380 | loss = 5.08 | elapsed time = 108.29 (s) ]
+05/16/2019 05:09:47 PM: [ train: Epoch = 0 | iter = 2050/5380 | loss = 5.17 | elapsed time = 109.57 (s) ]
+05/16/2019 05:09:48 PM: [ train: Epoch = 0 | iter = 2075/5380 | loss = 4.84 | elapsed time = 111.01 (s) ]
+05/16/2019 05:09:50 PM: [ train: Epoch = 0 | iter = 2100/5380 | loss = 4.73 | elapsed time = 112.36 (s) ]
+05/16/2019 05:09:51 PM: [ train: Epoch = 0 | iter = 2125/5380 | loss = 4.71 | elapsed time = 113.80 (s) ]
+05/16/2019 05:09:53 PM: [ train: Epoch = 0 | iter = 2150/5380 | loss = 4.79 | elapsed time = 115.16 (s) ]
+05/16/2019 05:09:54 PM: [ train: Epoch = 0 | iter = 2175/5380 | loss = 4.98 | elapsed time = 116.75 (s) ]
+05/16/2019 05:09:56 PM: [ train: Epoch = 0 | iter = 2200/5380 | loss = 4.69 | elapsed time = 118.29 (s) ]
+05/16/2019 05:09:57 PM: [ train: Epoch = 0 | iter = 2225/5380 | loss = 5.09 | elapsed time = 119.70 (s) ]
+05/16/2019 05:09:59 PM: [ train: Epoch = 0 | iter = 2250/5380 | loss = 4.79 | elapsed time = 121.16 (s) ]
+05/16/2019 05:10:00 PM: [ train: Epoch = 0 | iter = 2275/5380 | loss = 4.89 | elapsed time = 122.52 (s) ]
+05/16/2019 05:10:01 PM: [ train: Epoch = 0 | iter = 2300/5380 | loss = 4.95 | elapsed time = 123.90 (s) ]
+05/16/2019 05:10:03 PM: [ train: Epoch = 0 | iter = 2325/5380 | loss = 5.25 | elapsed time = 125.37 (s) ]
+05/16/2019 05:10:04 PM: [ train: Epoch = 0 | iter = 2350/5380 | loss = 4.86 | elapsed time = 126.88 (s) ]
+05/16/2019 05:10:06 PM: [ train: Epoch = 0 | iter = 2375/5380 | loss = 4.50 | elapsed time = 128.16 (s) ]
+05/16/2019 05:10:07 PM: [ train: Epoch = 0 | iter = 2400/5380 | loss = 4.75 | elapsed time = 129.57 (s) ]
+05/16/2019 05:10:08 PM: [ train: Epoch = 0 | iter = 2425/5380 | loss = 4.75 | elapsed time = 130.95 (s) ]
+05/16/2019 05:10:10 PM: [ train: Epoch = 0 | iter = 2450/5380 | loss = 4.91 | elapsed time = 132.34 (s) ]
+05/16/2019 05:10:11 PM: [ train: Epoch = 0 | iter = 2475/5380 | loss = 4.68 | elapsed time = 133.77 (s) ]
+05/16/2019 05:10:13 PM: [ train: Epoch = 0 | iter = 2500/5380 | loss = 4.73 | elapsed time = 135.23 (s) ]
+05/16/2019 05:10:14 PM: [ train: Epoch = 0 | iter = 2525/5380 | loss = 4.70 | elapsed time = 136.63 (s) ]
+05/16/2019 05:10:16 PM: [ train: Epoch = 0 | iter = 2550/5380 | loss = 4.99 | elapsed time = 138.12 (s) ]
+05/16/2019 05:10:17 PM: [ train: Epoch = 0 | iter = 2575/5380 | loss = 4.81 | elapsed time = 139.50 (s) ]
+05/16/2019 05:10:18 PM: [ train: Epoch = 0 | iter = 2600/5380 | loss = 4.81 | elapsed time = 140.83 (s) ]
+05/16/2019 05:10:20 PM: [ train: Epoch = 0 | iter = 2625/5380 | loss = 4.59 | elapsed time = 142.23 (s) ]
+05/16/2019 05:10:21 PM: [ train: Epoch = 0 | iter = 2650/5380 | loss = 4.52 | elapsed time = 143.58 (s) ]
+05/16/2019 05:10:22 PM: [ train: Epoch = 0 | iter = 2675/5380 | loss = 4.81 | elapsed time = 144.90 (s) ]
+05/16/2019 05:10:24 PM: [ train: Epoch = 0 | iter = 2700/5380 | loss = 4.60 | elapsed time = 146.26 (s) ]
+05/16/2019 05:10:25 PM: [ train: Epoch = 0 | iter = 2725/5380 | loss = 4.22 | elapsed time = 147.52 (s) ]
+05/16/2019 05:10:26 PM: [ train: Epoch = 0 | iter = 2750/5380 | loss = 4.59 | elapsed time = 148.86 (s) ]
+05/16/2019 05:10:28 PM: [ train: Epoch = 0 | iter = 2775/5380 | loss = 4.30 | elapsed time = 150.29 (s) ]
+05/16/2019 05:10:29 PM: [ train: Epoch = 0 | iter = 2800/5380 | loss = 4.76 | elapsed time = 151.66 (s) ]
+05/16/2019 05:10:31 PM: [ train: Epoch = 0 | iter = 2825/5380 | loss = 4.76 | elapsed time = 153.03 (s) ]
+05/16/2019 05:10:32 PM: [ train: Epoch = 0 | iter = 2850/5380 | loss = 4.36 | elapsed time = 154.41 (s) ]
+05/16/2019 05:10:33 PM: [ train: Epoch = 0 | iter = 2875/5380 | loss = 4.70 | elapsed time = 155.77 (s) ]
+05/16/2019 05:10:35 PM: [ train: Epoch = 0 | iter = 2900/5380 | loss = 4.62 | elapsed time = 157.10 (s) ]
+05/16/2019 05:10:36 PM: [ train: Epoch = 0 | iter = 2925/5380 | loss = 4.80 | elapsed time = 158.47 (s) ]
+05/16/2019 05:10:37 PM: [ train: Epoch = 0 | iter = 2950/5380 | loss = 4.65 | elapsed time = 159.72 (s) ]
+05/16/2019 05:10:38 PM: [ train: Epoch = 0 | iter = 2975/5380 | loss = 4.27 | elapsed time = 161.01 (s) ]
+05/16/2019 05:10:40 PM: [ train: Epoch = 0 | iter = 3000/5380 | loss = 4.54 | elapsed time = 162.28 (s) ]
+05/16/2019 05:10:41 PM: [ train: Epoch = 0 | iter = 3025/5380 | loss = 4.78 | elapsed time = 163.57 (s) ]
+05/16/2019 05:10:42 PM: [ train: Epoch = 0 | iter = 3050/5380 | loss = 4.23 | elapsed time = 164.99 (s) ]
+05/16/2019 05:10:44 PM: [ train: Epoch = 0 | iter = 3075/5380 | loss = 4.48 | elapsed time = 166.26 (s) ]
+05/16/2019 05:10:45 PM: [ train: Epoch = 0 | iter = 3100/5380 | loss = 4.28 | elapsed time = 167.63 (s) ]
+05/16/2019 05:10:47 PM: [ train: Epoch = 0 | iter = 3125/5380 | loss = 4.48 | elapsed time = 169.06 (s) ]
+05/16/2019 05:10:48 PM: [ train: Epoch = 0 | iter = 3150/5380 | loss = 4.45 | elapsed time = 170.42 (s) ]
+05/16/2019 05:10:49 PM: [ train: Epoch = 0 | iter = 3175/5380 | loss = 4.62 | elapsed time = 171.76 (s) ]
+05/16/2019 05:10:51 PM: [ train: Epoch = 0 | iter = 3200/5380 | loss = 4.71 | elapsed time = 173.24 (s) ]
+05/16/2019 05:10:52 PM: [ train: Epoch = 0 | iter = 3225/5380 | loss = 4.62 | elapsed time = 174.56 (s) ]
+05/16/2019 05:10:53 PM: [ train: Epoch = 0 | iter = 3250/5380 | loss = 4.57 | elapsed time = 175.89 (s) ]
+05/16/2019 05:10:55 PM: [ train: Epoch = 0 | iter = 3275/5380 | loss = 4.75 | elapsed time = 177.21 (s) ]
+05/16/2019 05:10:56 PM: [ train: Epoch = 0 | iter = 3300/5380 | loss = 4.49 | elapsed time = 178.53 (s) ]
+05/16/2019 05:10:57 PM: [ train: Epoch = 0 | iter = 3325/5380 | loss = 4.47 | elapsed time = 179.82 (s) ]
+05/16/2019 05:10:59 PM: [ train: Epoch = 0 | iter = 3350/5380 | loss = 4.66 | elapsed time = 181.08 (s) ]
+05/16/2019 05:11:00 PM: [ train: Epoch = 0 | iter = 3375/5380 | loss = 4.73 | elapsed time = 182.42 (s) ]
+05/16/2019 05:11:01 PM: [ train: Epoch = 0 | iter = 3400/5380 | loss = 4.48 | elapsed time = 183.73 (s) ]
+05/16/2019 05:11:03 PM: [ train: Epoch = 0 | iter = 3425/5380 | loss = 4.38 | elapsed time = 185.09 (s) ]
+05/16/2019 05:11:04 PM: [ train: Epoch = 0 | iter = 3450/5380 | loss = 4.47 | elapsed time = 186.51 (s) ]
+05/16/2019 05:11:05 PM: [ train: Epoch = 0 | iter = 3475/5380 | loss = 4.58 | elapsed time = 187.84 (s) ]
+05/16/2019 05:11:07 PM: [ train: Epoch = 0 | iter = 3500/5380 | loss = 4.52 | elapsed time = 189.13 (s) ]
+05/16/2019 05:11:08 PM: [ train: Epoch = 0 | iter = 3525/5380 | loss = 4.48 | elapsed time = 190.74 (s) ]
+05/16/2019 05:11:10 PM: [ train: Epoch = 0 | iter = 3550/5380 | loss = 4.49 | elapsed time = 192.10 (s) ]
+05/16/2019 05:11:11 PM: [ train: Epoch = 0 | iter = 3575/5380 | loss = 4.11 | elapsed time = 193.37 (s) ]
+05/16/2019 05:11:12 PM: [ train: Epoch = 0 | iter = 3600/5380 | loss = 4.06 | elapsed time = 194.74 (s) ]
+05/16/2019 05:11:14 PM: [ train: Epoch = 0 | iter = 3625/5380 | loss = 4.61 | elapsed time = 196.02 (s) ]
+05/16/2019 05:11:15 PM: [ train: Epoch = 0 | iter = 3650/5380 | loss = 4.46 | elapsed time = 197.51 (s) ]
+05/16/2019 05:11:16 PM: [ train: Epoch = 0 | iter = 3675/5380 | loss = 4.42 | elapsed time = 198.90 (s) ]
+05/16/2019 05:11:18 PM: [ train: Epoch = 0 | iter = 3700/5380 | loss = 4.52 | elapsed time = 200.26 (s) ]
+05/16/2019 05:11:19 PM: [ train: Epoch = 0 | iter = 3725/5380 | loss = 4.35 | elapsed time = 201.60 (s) ]
+05/16/2019 05:11:20 PM: [ train: Epoch = 0 | iter = 3750/5380 | loss = 4.33 | elapsed time = 202.91 (s) ]
+05/16/2019 05:11:22 PM: [ train: Epoch = 0 | iter = 3775/5380 | loss = 4.40 | elapsed time = 204.29 (s) ]
+05/16/2019 05:11:23 PM: [ train: Epoch = 0 | iter = 3800/5380 | loss = 4.30 | elapsed time = 205.56 (s) ]
+05/16/2019 05:11:25 PM: [ train: Epoch = 0 | iter = 3825/5380 | loss = 4.41 | elapsed time = 207.05 (s) ]
+05/16/2019 05:11:26 PM: [ train: Epoch = 0 | iter = 3850/5380 | loss = 4.47 | elapsed time = 208.40 (s) ]
+05/16/2019 05:11:27 PM: [ train: Epoch = 0 | iter = 3875/5380 | loss = 4.55 | elapsed time = 209.85 (s) ]
+05/16/2019 05:11:29 PM: [ train: Epoch = 0 | iter = 3900/5380 | loss = 4.15 | elapsed time = 211.20 (s) ]
+05/16/2019 05:11:30 PM: [ train: Epoch = 0 | iter = 3925/5380 | loss = 4.58 | elapsed time = 212.61 (s) ]
+05/16/2019 05:11:32 PM: [ train: Epoch = 0 | iter = 3950/5380 | loss = 4.40 | elapsed time = 214.05 (s) ]
+05/16/2019 05:11:33 PM: [ train: Epoch = 0 | iter = 3975/5380 | loss = 4.59 | elapsed time = 215.48 (s) ]
+05/16/2019 05:11:34 PM: [ train: Epoch = 0 | iter = 4000/5380 | loss = 4.36 | elapsed time = 216.88 (s) ]
+05/16/2019 05:11:36 PM: [ train: Epoch = 0 | iter = 4025/5380 | loss = 4.37 | elapsed time = 218.36 (s) ]
+05/16/2019 05:11:37 PM: [ train: Epoch = 0 | iter = 4050/5380 | loss = 4.43 | elapsed time = 219.80 (s) ]
+05/16/2019 05:11:39 PM: [ train: Epoch = 0 | iter = 4075/5380 | loss = 4.64 | elapsed time = 221.33 (s) ]
+05/16/2019 05:11:40 PM: [ train: Epoch = 0 | iter = 4100/5380 | loss = 4.49 | elapsed time = 222.69 (s) ]
+05/16/2019 05:11:42 PM: [ train: Epoch = 0 | iter = 4125/5380 | loss = 4.48 | elapsed time = 224.34 (s) ]
+05/16/2019 05:11:43 PM: [ train: Epoch = 0 | iter = 4150/5380 | loss = 4.08 | elapsed time = 225.74 (s) ]
+05/16/2019 05:11:45 PM: [ train: Epoch = 0 | iter = 4175/5380 | loss = 4.31 | elapsed time = 227.34 (s) ]
+05/16/2019 05:11:46 PM: [ train: Epoch = 0 | iter = 4200/5380 | loss = 4.33 | elapsed time = 228.74 (s) ]
+05/16/2019 05:11:48 PM: [ train: Epoch = 0 | iter = 4225/5380 | loss = 4.47 | elapsed time = 230.16 (s) ]
+05/16/2019 05:11:49 PM: [ train: Epoch = 0 | iter = 4250/5380 | loss = 4.14 | elapsed time = 231.63 (s) ]
+05/16/2019 05:11:51 PM: [ train: Epoch = 0 | iter = 4275/5380 | loss = 4.51 | elapsed time = 233.03 (s) ]
+05/16/2019 05:11:52 PM: [ train: Epoch = 0 | iter = 4300/5380 | loss = 4.31 | elapsed time = 234.48 (s) ]
+05/16/2019 05:11:53 PM: [ train: Epoch = 0 | iter = 4325/5380 | loss = 4.33 | elapsed time = 235.84 (s) ]
+05/16/2019 05:11:55 PM: [ train: Epoch = 0 | iter = 4350/5380 | loss = 4.00 | elapsed time = 237.12 (s) ]
+05/16/2019 05:11:56 PM: [ train: Epoch = 0 | iter = 4375/5380 | loss = 4.37 | elapsed time = 238.53 (s) ]
+05/16/2019 05:11:57 PM: [ train: Epoch = 0 | iter = 4400/5380 | loss = 4.22 | elapsed time = 239.96 (s) ]
+05/16/2019 05:11:59 PM: [ train: Epoch = 0 | iter = 4425/5380 | loss = 3.88 | elapsed time = 241.34 (s) ]
+05/16/2019 05:12:00 PM: [ train: Epoch = 0 | iter = 4450/5380 | loss = 4.63 | elapsed time = 242.75 (s) ]
+05/16/2019 05:12:02 PM: [ train: Epoch = 0 | iter = 4475/5380 | loss = 4.29 | elapsed time = 244.15 (s) ]
+05/16/2019 05:12:03 PM: [ train: Epoch = 0 | iter = 4500/5380 | loss = 4.28 | elapsed time = 245.55 (s) ]
+05/16/2019 05:12:04 PM: [ train: Epoch = 0 | iter = 4525/5380 | loss = 4.29 | elapsed time = 246.87 (s) ]
+05/16/2019 05:12:06 PM: [ train: Epoch = 0 | iter = 4550/5380 | loss = 3.85 | elapsed time = 248.25 (s) ]
+05/16/2019 05:12:07 PM: [ train: Epoch = 0 | iter = 4575/5380 | loss = 4.02 | elapsed time = 249.78 (s) ]
+05/16/2019 05:12:09 PM: [ train: Epoch = 0 | iter = 4600/5380 | loss = 4.50 | elapsed time = 251.22 (s) ]
+05/16/2019 05:12:10 PM: [ train: Epoch = 0 | iter = 4625/5380 | loss = 4.14 | elapsed time = 252.70 (s) ]
+05/16/2019 05:12:12 PM: [ train: Epoch = 0 | iter = 4650/5380 | loss = 4.31 | elapsed time = 254.17 (s) ]
+05/16/2019 05:12:13 PM: [ train: Epoch = 0 | iter = 4675/5380 | loss = 4.18 | elapsed time = 255.40 (s) ]
+05/16/2019 05:12:14 PM: [ train: Epoch = 0 | iter = 4700/5380 | loss = 4.12 | elapsed time = 256.80 (s) ]
+05/16/2019 05:12:16 PM: [ train: Epoch = 0 | iter = 4725/5380 | loss = 4.13 | elapsed time = 258.18 (s) ]
+05/16/2019 05:12:17 PM: [ train: Epoch = 0 | iter = 4750/5380 | loss = 4.38 | elapsed time = 259.65 (s) ]
+05/16/2019 05:12:19 PM: [ train: Epoch = 0 | iter = 4775/5380 | loss = 4.20 | elapsed time = 261.15 (s) ]
+05/16/2019 05:12:20 PM: [ train: Epoch = 0 | iter = 4800/5380 | loss = 4.38 | elapsed time = 262.76 (s) ]
+05/16/2019 05:12:22 PM: [ train: Epoch = 0 | iter = 4825/5380 | loss = 4.38 | elapsed time = 264.29 (s) ]
+05/16/2019 05:12:23 PM: [ train: Epoch = 0 | iter = 4850/5380 | loss = 4.31 | elapsed time = 265.75 (s) ]
+05/16/2019 05:12:25 PM: [ train: Epoch = 0 | iter = 4875/5380 | loss = 4.43 | elapsed time = 267.18 (s) ]
+05/16/2019 05:12:26 PM: [ train: Epoch = 0 | iter = 4900/5380 | loss = 4.43 | elapsed time = 268.59 (s) ]
+05/16/2019 05:12:27 PM: [ train: Epoch = 0 | iter = 4925/5380 | loss = 4.20 | elapsed time = 269.97 (s) ]
+05/16/2019 05:12:29 PM: [ train: Epoch = 0 | iter = 4950/5380 | loss = 4.24 | elapsed time = 271.41 (s) ]
+05/16/2019 05:12:30 PM: [ train: Epoch = 0 | iter = 4975/5380 | loss = 4.23 | elapsed time = 272.84 (s) ]
+05/16/2019 05:12:32 PM: [ train: Epoch = 0 | iter = 5000/5380 | loss = 4.17 | elapsed time = 274.26 (s) ]
+05/16/2019 05:12:33 PM: [ train: Epoch = 0 | iter = 5025/5380 | loss = 4.11 | elapsed time = 275.62 (s) ]
+05/16/2019 05:12:35 PM: [ train: Epoch = 0 | iter = 5050/5380 | loss = 4.22 | elapsed time = 277.04 (s) ]
+05/16/2019 05:12:36 PM: [ train: Epoch = 0 | iter = 5075/5380 | loss = 4.26 | elapsed time = 278.46 (s) ]
+05/16/2019 05:12:37 PM: [ train: Epoch = 0 | iter = 5100/5380 | loss = 3.96 | elapsed time = 279.82 (s) ]
+05/16/2019 05:12:39 PM: [ train: Epoch = 0 | iter = 5125/5380 | loss = 4.10 | elapsed time = 281.15 (s) ]
+05/16/2019 05:12:40 PM: [ train: Epoch = 0 | iter = 5150/5380 | loss = 4.11 | elapsed time = 282.49 (s) ]
+05/16/2019 05:12:41 PM: [ train: Epoch = 0 | iter = 5175/5380 | loss = 4.35 | elapsed time = 283.83 (s) ]
+05/16/2019 05:12:43 PM: [ train: Epoch = 0 | iter = 5200/5380 | loss = 4.33 | elapsed time = 285.21 (s) ]
+05/16/2019 05:12:44 PM: [ train: Epoch = 0 | iter = 5225/5380 | loss = 4.50 | elapsed time = 286.79 (s) ]
+05/16/2019 05:12:46 PM: [ train: Epoch = 0 | iter = 5250/5380 | loss = 4.31 | elapsed time = 288.19 (s) ]
+05/16/2019 05:12:47 PM: [ train: Epoch = 0 | iter = 5275/5380 | loss = 4.30 | elapsed time = 289.51 (s) ]
+05/16/2019 05:12:48 PM: [ train: Epoch = 0 | iter = 5300/5380 | loss = 4.08 | elapsed time = 290.82 (s) ]
+05/16/2019 05:12:50 PM: [ train: Epoch = 0 | iter = 5325/5380 | loss = 4.36 | elapsed time = 292.18 (s) ]
+05/16/2019 05:12:51 PM: [ train: Epoch = 0 | iter = 5350/5380 | loss = 4.61 | elapsed time = 293.62 (s) ]
+05/16/2019 05:12:52 PM: [ train: Epoch = 0 | iter = 5375/5380 | loss = 4.03 | elapsed time = 294.97 (s) ]
+05/16/2019 05:12:53 PM: [ train: Epoch 0 done. Time for epoch = 295.16 (s) ]
+05/16/2019 05:13:11 PM: [ train valid unofficial: Epoch = 0 | start = 52.60 | end = 57.93 | exact = 44.01 | examples = 10000 | valid time = 18.37 (s) ]
+05/16/2019 05:13:27 PM: [ dev valid unofficial: Epoch = 0 | start = 30.64 | end = 32.06 | exact = 26.65 | examples = 11873 | valid time = 16.40 (s) ]
+Traceback (most recent call last):
+  File "scripts/reader/train.py", line 546, in <module>
+    main(args)
+  File "scripts/reader/train.py", line 496, in main
+    dev_offsets, dev_texts, dev_answers)
+  File "scripts/reader/train.py", line 307, in validate_official
+    utils.exact_match_score, prediction, ground_truths))
+  File "./drqa/reader/utils.py", line 232, in metric_max_over_ground_truths
+    return max(scores_for_ground_truths)
+ValueError: max() arg is an empty sequence
